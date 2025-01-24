@@ -74,5 +74,7 @@ Logged into client 1 as your admin account
 
 ![Screenshot 2025-01-24 122801](https://github.com/user-attachments/assets/d2d1d5bb-8f00-46dd-8a69-6054b0b6bfbf)
 
-Log back into the DC as your admin account. open active directory and confirm that client 1 has joined the domain.
+Log back into the DC as your admin account. 
+
+Observe active directory and confirm that client 1 has joined the domain.
 
