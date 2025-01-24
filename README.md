@@ -3,7 +3,7 @@
 </p>
 
 <h1>Deploying Active Directory in the Cloud (Azure)</h1>
-This tutorial outlines the deplyment of active direcoty within Azure Virtual Machines.<br />
+This tutorial outlines the deplyment of active directory within Azure Virtual Machines.<br />
 Prerequisites-
 
 - have a domain controller running on a virtual machine
