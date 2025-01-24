@@ -23,7 +23,7 @@ Prerequisites-
 - Windows Server 2022
 - Windows 10 (21H2)
 <h2>High-Level Deployment and Configuration Steps</h2>
-Today we will be deploying and configuring active direcotry using azure vms
+Today we will be deploying and configuring active directory using azure vms
 
 - Install active direcotry domain services onto the domain controller and setup a new forest (mydomain.com)
 - Create orginization units for your users
