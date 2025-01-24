@@ -2,13 +2,14 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+<h1>Deploying Active Directory in the Cloud (Azure)</h1>
+This tutorial outlines the deplyment of active direcoty within Azure Virtual Machines.<br />
+Prerequisites-
 
+- have a domain controller running on a virtual machine
 
-<h2>Video Demonstration</h2>
+- have a client side pc running on a virtual machine 
 
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -21,36 +22,57 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 - Windows Server 2022
 - Windows 10 (21H2)
-
 <h2>High-Level Deployment and Configuration Steps</h2>
+Today we will be deploying and configuring active direcotry using azure vms
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Install active direcotry domain services onto the domain controller and setup a new forest (mydomain.com)
+- Create orginization units for your users
+- Create a domain admin user and normal user within active directory users and computers
+- Join client 1 to the domain (mydomain.com) using your newly created admin profile
+- log into doamin controller as the admin profile you created and verify client 1 is joined to the dc
 
-<h2>Deployment and Configuration Steps</h2>
+<h2>Deployment Step 1</h2>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+![Screenshot 2025-01-24 121826](https://github.com/user-attachments/assets/2160721c-1623-43ae-b8b8-85832276dd74)
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Login into your domain controller and install active directory services, set up a new forest (mydomain.com)
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![Screenshot 2025-01-24 122230](https://github.com/user-attachments/assets/42983e5a-c730-41f8-89bf-0e97ec576902)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+  Create oginizational units within active directory-users and computers
+ 
+  Create a domain admin and a normal user
+
+  Restart DC1 and Client1
+Log back into your vm's using the admin profile you created
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![Screenshot 2025-01-24 122521](https://github.com/user-attachments/assets/56c8946a-6a9c-4188-94f8-bfc3337c0a74)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Logged into client 1 as your admin account
+
+  Go into your system preferences
+  
+  Join client 1 to your domain (mydomain.com)
 </p>
 <br />
+
+![Screenshot 2025-01-24 122801](https://github.com/user-attachments/assets/d2d1d5bb-8f00-46dd-8a69-6054b0b6bfbf)
+
+Log back into the DC as your admin account. open active directory and confirm that client 1 has joined the domain.
+
