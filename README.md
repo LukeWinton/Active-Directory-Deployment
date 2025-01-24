@@ -25,7 +25,7 @@ Prerequisites-
 <h2>High-Level Deployment and Configuration Steps</h2>
 Today we will be deploying and configuring active directory using azure vms
 
-- Install active direcotry domain services onto the domain controller and setup a new forest (mydomain.com)
+- Install active directory domain services onto the domain controller and setup a new forest (mydomain.com)
 - Create orginization units for your users
 - Create a domain admin user and normal user within active directory users and computers
 - Join client 1 to the domain (mydomain.com) using your newly created admin profile
